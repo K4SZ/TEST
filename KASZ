@@ -1,0 +1,691 @@
+Multiprompting (Multis) for Text to Image AI “Midjourney"
+
+Multiprompting is a prompting technique that gives you more control over your image at the cost of added complexity. Multiprompting breaks up your prompt into multiple pieces called multis using the multi separator ::X (where X is the weight, a number)
+
+Example Prompt 1: Wolverine meets Miyamoto Musashi::8 Japanese literature, samurai tales::6 Comic arts, John Byrne::4 Edo period art, Ukiyo-e woodblock prints::3
+
+This formatting is taking advantage of Midjourney's multi-prompt functionality. The :: splits up the prompt and the number chosen controls the weight of the prompt that came before it. In each piece it is important that the kind of artwork is mentioned, so that the multi-prompts do not interfere with each other. Since the AI does not understand grammar, in each part use comma separated keywords with heavy meaning to describe each.
+Since this will be used for AI 'Text-to-Image' processing, it's far more important to be specific than accurate to an existing style. Make bold and interesting choices when you invent your own art style.
+
+Please start by describing the image in a visually appealing style with clear detail so someone would be inspired to try the multi. (Write in the format of persuasive ad copy). Please also describe the visually appealing own unique mixed up art style with clear detail.
+The Scene, traits, lighting, and mood can be brief descriptions in plain English. Scenes should be creative and extremely unique, bold outlooks on interesting visual places. Traits can be anything from items in the scene, to color pallet, or anything else to make the idea more unique. The lighting and mood should be consistent and can be used to enhance the visual idea. 
+No matter what parameter you use, they should match the vibe and tone of the scene you describe. 
+
+Combining Ideas
+The power of multprompting is having control of how your ideas are combined. Tokens inside each multi are merged into discrete statements. The relative contribution of these statements to your end result are adjusted by the multi weight. In other words, the higher the number, the stronger the effect.
+
+Example Prompt 2: Tesla coils, espionage adventure::15 striking visuals, vibrant hues, sharp design, Soviet propaganda influence::10 high-contrast, textured surfaces, dynamic composition::8 scientific city, vintage futuristic::5
+
+Multiprompting Rules
+In Midjourney multi separators take the form ::X  where X is a number called the layer weight. X may be positive, zero, or negative. The sum of all multi weights must remain positive. A zero weight layer has almost no effect. A negative weight layer (::-X) negates the Terms written before the ::-X.
+
+Example Prompt 3: Dream of the Endless, neurodiverse, Sandman::20 spooky, cute, dark, rainbow accents, gothic aesthetic::15 popular fiction, Neil Gaiman, dream realm::10 illustrative style, detailed environments, vivid colors::8 introspection, imagination, and the power of dreams::7 photography, realistic::-8
+
+Balancing With Weights
+The numbers you use are relative to each other.
+Example: Cat::1 Dog::1 is the same as Cat::700 Dog::700
+These two Example prompts are identical to midjourney. This means you are free to adjust these numbers however makes the most sense to you.  Whole numbers or decimals doesn’t matter. Just relative size. This makes balancing easy. Don’t see the thing you want in your image? Put it in it’s own multi and turn up the weight until it shows up.
+
+Example Prompt 4: Breezy Bolt, the speedy flying squirrel::20 In the style of "Looney Tunes" by Tex Avery, Chuck Jones, and Friz Freleng, slapstick humor, exaggerated expressions::15 Acrobatic feats, quick reflexes, and comedic timing::10 Colorful forest landscapes, bustling with energetic critters::7 Character design inspired by classic "Looney Tunes" characters with a touch of modern flair::10 Realistic, unedited::-3
+
+Benefits of multiprompting
+Multi weights give you control over relative contribution of ideas to your end result. 77 Token limit is per multi, not per prompt. You have more control with multiprompting by being able to use more ideas and control the balance of those ideas. 
+
+Example Prompt 5: Baron Samedi collecting souls, tall, Haitian Vodou loa of the dead, wearing a top hat, skull makeup, and a dark suit::20 dark, occult, rainbow, gothic, cute elements::15 the Vodou afterlife, Ginen, a spiritual realm where the dead reside and interact with the living, a place of lush forests, rolling hills, and tranquil waters::10 Visual Kei style, Japanese rock fashion, bold makeup, and elaborate hairstyles::13 souls depicted as ethereal, glowing spirits, being guided by the enigmatic Baron Samedi::7 In the artistic style of Salvador Dalí mixed with Hokusai, combining surreal, dreamlike landscapes with traditional Japanese woodblock prints::5 In the style of contemporary illustrators such as Yoko d'Holbachie, Amano, and Fuyuko Matsui, featuring vibrant colors, a mix of Surrealism and Manga influences, and eerie, otherworldly themes::3 photography, CGI::-4 desaturated::-3 cluttered::-5
+
+Word Choice: Visually descriptive language
+The best words for your prompt are the ones that describe what you want specifically and visually. Your goal is to describe your desired image as clearly as possible and in as much rich specific visual detail as you can. 
+
+Example Prompt 6: A captivating action shot capturing the essence of fine scotch being poured mid-air into an exquisite crystal glass::20 The scene, illuminated by warm, moody lighting, highlights the amber hues of the scotch and the intricate details of the glass::25 A luxurious, cut crystal decanter held at a slight angle, releasing a smooth stream of scotch that cascades into the glass, creating a visually dynamic splash::15 Macro photography, using a high-quality camera like the Canon EOS R5, captures the velvety, smooth texture of the scotch in mid-pour, the delicate dance of light on the liquid's surface, and the mesmerizing droplets suspended in air::30 In the style of professional product photography, emphasizing the allure and prestige of the scotch, glass, and decanter in this captivating moment::20 Rich, glowing colors and striking contrasts, showcasing the interplay of light, shadow, and reflections, creating a visually stunning and memorable image::25 paper, magazine, flat, advertisment, cluttered, instagram::-10
+
+Signal Versus Noise
+The signal is the meaningful information. The noise is the random, unwanted variation or fluctuation that interferes with the signal. Avoid anything that doesn’t contribute to your goal. There are lots of popular noisy prompts out there with words like “trending on artstation” or “4k.”  Unless your goal is of a product image of a television there’s a good chance “4k”  is useless noise that’s more likely to make a TV show up in your image than make it sharper.
+
+Example Prompt 7: Nova, cyberpunk hacker, androgynous, vibrant hair, tattoos with circuitry patterns, tech-infused clothing::25 Surrounded by holographic screens, decrypting data, exposing corruption::18 In the artistic style of Syd Mead, Josan Gonzalez, Ashley Wood, and Yoji Shinkawa, combining Mead's visionary concept design and futuristic architecture, Gonzalez's intricate detailing and vivid use of color, Wood's gritty textures and atmospheric colors, and Shinkawa's expressive ink brushwork::20 Photorealistic, abstract, minimalist::-10
+
+Avoid metaphors without a clear visual meaning especially if they refer to visual things you don’t want in your image.
+Example Prompt 8: Adorable chibi bat spread soaring in front of a friendly moon::10 in the style of invader zim, by jhonen vasquez::4 anatomically correct flying fox fruit bat::15 bat with dark rainbow aesthetic::3 3d rendered, nature photograph ::-1 Arms, Legs::-6
+
+Multi Structure
+Harmonious Combinations
+The words inside your multi are combined to a single discrete statment. The power of multiprompting is in adjusting the contribution of those multis. Multis should be harmonious; they should only contain ideas you want together. You want to be able to adjust the weight of ideas individually. Keeping your multis clean and harmonious allow you to increase or decrease weights on discrete ideas cleanly.
+
+Example Prompt 9: Severin, an elven rogue ranger wielding ethereal - gleaming paired soul daggers::5 dark green mohawk haircut pointy ears::10 wearing intricately crafted leather armor with elvish patterns for stealth and agility::3 Lush, natural environment of dense foliage, trees, dappled shadows highlighting his connection to the wilderness::2 Modern adult fantasy comic art, Fiona Staples, Brian K. Vaughan for vivid visual details::3 Art Nouveau, Alphonse Mucha, Gustav Klimt, elegant curves, intricate patterns, ornamental details::2
+
+Strong Subject
+Start with a subject multi that contains everything you want in your image. This anchors the rest of the prompt and allows you to focus on individual elements in later multis. 
+Example Prompt 10: Terragen Oasis on Arrakis, a lush refuge among the dunes::20 In the style of "Dune" by Frank Herbert, intricate world-building, immersive environments::15 A rare and hidden oasis filled with towering, spiral-shaped trees covered in iridescent leaves, and bioluminescent flowers that emit a soft, mesmerizing glow::10 Amidst the desert sands, the oasis is surrounded by a crystal-clear lake, fed by an underground river, with a sandy shore composed of glittering, multi-colored grains::7 Unique fauna such as desert-dwelling, six-legged reptiles with jewel-like scales, and bird-like creatures with long, ribbon-like tails::10 Realistic, unedited::-3
+
+Flesh out specifics: Use subsequent multis to describe specific elements of the subject in more detail.
+
+Example Prompt 11: A majestic phoenix, vibrant fiery plumage, golden beak, piercing sapphire eyes::25 Soaring through a lush, ethereal forest, its bright, fiery feathers illuminating the foliage, a symbol of renewal and hope::18 With the ability to be reborn from its own ashes, the phoenix represents immortality and the cyclical nature of life, its enchanting song capable of soothing and healing those who hear it::20 In the artistic style of Edmund Dulac and Arthur Rackham, combining intricate linework, lush, atmospheric watercolors, evoking a sense of wonder and enchantment, with Rackham's signature pen-and-ink details and gnarled, twisted trees::12 illustrative, cartoon, CG, abstract, minimalist::-10
+
+Style Layers: “In the style of” seems to be a special form in Midjourney which you should always use when describing a specific style, especially if the style contains a name.  This makes sure to put the art style in the image instead of a person. This is especially important with landscapes. Style layers benefit greatly from maximum information such as the name of specific works, artists, and detailed description of style.
+
+Example Prompt 12: Rock Lobster, movie poster, Toho Godzilla style, B-52's silly style::20 Gigantic lobster creature, menacing yet comical, towering over a cityscape, claws raised, eyes wide with a playful expression::12 Iconic Godzilla-like appearance, with a B-52's twist, incorporating vibrant colors, retro patterns, and whimsical design elements::18 Members of the B-52's, dressed in their eccentric attire, striking bold poses, as they face the colossal crustacean, instruments in hand, ready to rock::22 Cityscape backdrop, reflecting a blend of classic Toho monster movie destruction and the quirky, retro-futuristic aesthetic of the B-52's::16 Dynamic composition, with the band and the Rock Lobster taking center stage, surrounded by chaos, yet infused with a sense of fun and excitement::8 In the artistic style of Noriyoshi Ohrai mixed with Peter Max, combining the dramatic, action-packed visuals of classic Godzilla posters with the vibrant, psychedelic art of the 1960s and 1970s::9 In the style of contemporary illustrators such as Tyler Stout, Olly Moss, and Tom Whalen, featuring bold graphics, intricate detail, and a unique fusion of vintage and modern aesthetics::7 photographic, hand-drawn, black and white, minimalist::-12 pastel, watercolor, abstract, desaturated::-10
+
+Isolate difficult elements: If you are having trouble getting a specific thing in your image make a specific layer for it, and keep increasing the weight until you are happy with it.
+
+Example Prompt 13: Beautiful Face::25 Beautiful Ursula playing tricks in her undersea lair, curvaceous, ample hourglass, iconic Disney villain, depicted with her signature purple skin, white hair, and powerful octopus-like lower body with eight muscular, sucker-lined tentacles::22 Ursula the Beautiful Sea Witch with a fat curvaceous hourglass body style, reubenesque, chubby, rotund, mom-bod::16 dark, occult, rainbow, gothic, cute elements::12 the undersea lair, a mystical underwater cavern filled with eerie glowing plants, twisting rock formations, and bewitched sea creatures::5 Visual Kei style, Japanese rock fashion, bold makeup, and elaborate hairstyles::3 Ursula casting a spell to transform a school of fish into her loyal minions, creating an army of mischievous aquatic creatures::7 In the artistic style of Arthur Rackham mixed with Suehiro Maruo, combining whimsical, intricate illustrations with dark, evocative themes::5 In the style of contemporary illustrators such as James Jean, Victo Ngai, and Karl Kerschl, featuring rich textures, bold colors, and a mix of fantasy and surrealism::8 animation, hand drawn, flat, 2d::-8 ugly::-5 cluttered::-6 thin::-2 legs, feet::-5
+
+Reiteration: Repeating your core idea in subsequent multis is produces more visually cohesive images. This is especially useful when trying to achieve difficult subjects. If you are describing specific elements in a multi you will usually get better results if you reiterate those elements.
+
+Example Prompt 14: Surreal breakfast jellyfish: A visually captivating scene, blending the unusual combination of marine life and morning meal elements::75 Graceful breakfast jellyfish, with translucent, glowing bodies made out of breakfast foods, drifting effortlessly through the air, creating a dreamlike atmosphere::40 Instead of their usual tentacles, these jellyfish possess a variety of breakfast-themed appendages, such as strips of bacon, strands of syrupy spaghetti, and buttered toast::50 breakfast jellyfish rendered in a soft, pastel-colored dreamscape, evoking the early morning light and the gentle, soothing ambiance of a serene underwater breakfast diner world::35 digital painting, illustration, contemporary art, surrealism, dreamlike::10 overmedium egg, chicken fried steak country gravy, hashbrowns, deep water, giant kelp, god rays::105 3d rendered, cgi, video game, sketch, cartoon, comic::-20
+
+Please Stay Idle, I got more informations for you for you.
+
+Negative Prompting (Important)
+Subtract what you don’t want. Saying where you don’t want to go helps you get closer to where you want to be. Negative weight multis are powerful way to control the look of your images. 
+
+Example Prompt 15: Sun Wukong, genderqueer, trickster::20 spooky, cute, dark, rainbow, gothic aesthetics::15 Journey to the West, Chinese mythology, Monkey King::10 ukiyo-e style, bold outlines, rich colors, and detailed patterns::8 embracing mischief, cunning, and the spirit of adventure::7 classical, Renaissance art::-2.4 abstract, minimalist forms::-2.4 photographic, high-definition textures::-1.2
+Here is a list of Example Words for noise negation based on broad style categories. For each different category of style in a prompt make a new noise negation layer with these Descriptors. Then always do a visual analysis on the positive part of the prompt and remove all Descriptors from any noise negation layers that would be present in the analysis. Then balance the negation layers equally at the desired noise negation percentage
+
+Example Descriptors:
+If you want to achieve artistic, painterly styles use: photograph, photo, snapshot, exposure, film, camera, lens, shutter, aperture, depth-of-field, ISO, real-life, realistic
+If you want to achieve photographic styles use: digital-painting, illustration, drawing, sketch, painted, brushstrokes, canvas, art, painterly, watercolor, acrylic, oil-painting, pastel, charcoal, stylized, hand-drawn
+If you want to achieve animation/cartoon styles: realistic, photo-realistic, live-action, practical-effects, detailed-textures, high-definition, true-to-life, life-like
+If you want to achieve  realistic, live-action styles: cartoon, animated, hand-drawn, cel-shading, 2D-animation, 3D-animation, stop-motion, exaggerated, simplified
+If you want to achieve sculpture and pottery styles: flat, 2D, illustration, drawing, paper, canvas, digital, print
+If you want to achieve comics and graphic novels: photorealistic, high-definition, life-like, sculpture, pottery, movie, TV, CGI, VFX, practical-effects
+If you want to achieve movies, TV, and visual effects: comic, graphic-novel, drawn, sketch, inked, pen-and-ink, pencil, charcoa
+
+Undesired Elements
+Removing undersired elements that show up unwanted in your image is the most obvious and common use of negative prompting.
+
+Example Prompt 16: Young crystalline dragon, serrated crystal body, faint rich purple tint::10 the crystal appearing both translucent and reflective, with an iridescent sheen that catches the light, creating a mesmerizing play of colors::20 crystal dragon with a sleek, sinuous body, strong limbs, and a long, whip-like tail::15 crystalline wings that have sharp razor edges, each flap catching and refracting light in a dazzling display::10 potent psychic abilities, telepathic communication, psionic shockwave::10 crystal dragon perched on a cliff edge, surveying the landscape below, poised to take flight or unleash its psionic power::27 the dragon's movement fluid and graceful, each motion causing light to shimmer and dance across its crystalline form, hinting at its supernatural power::8 In the artistic style of Ciruelo Cabral mixed with Nene Thomas, combining the intricate, fantastical designs of dragon illustrations with the ethereal, otherworldly elegance of fairy art::5 In the style of contemporary illustrators such as Todd Lockwood, Julie Dillon, and Donato Giancola, featuring dynamic poses, rich colors, and a blend of realism and fantasy::8 miniature, black background, figurine, decoration::-10 scales, feathers::-6
+
+Resolve ambiguity
+Parts of your prompts may have many meanings or have been represented in multiple styles.  Subtracting the styles you don’t want will make the one you want stronger.
+
+Example Prompt 17: Michelangelo, Teenage Mutant Ninja Turtle, skilled martial artist, and resident fun-loving, pizza enthusiast::15 Animated character, sporting his signature orange bandana, wielding a pair of nunchaku with expertise and agility::20 Captured mid-action, skillfully skateboarding down a city street, while simultaneously devouring a mouthwatering slice of pizza::18 A highly detailed visual representation, showcasing Michelangelo's muscular physique, textured reptilian skin, and the intricate design of his iconic ninja gear::25 In the style of the original Eastman and Laird comics, featuring stark black and white contrasts, heavy use of shadows, and a gritty, raw aesthetic that harkens back to the TMNT's comic book origins::20 Dynamic action scene, set against a bustling urban backdrop, complete with towering skyscrapers, neon-lit signs, and the energy of city life::10 In the style of Kevin Eastman and Peter Laird, showcasing expressive character design, dynamic panel layouts, and powerful storytelling::20 3d Rendered, Movie, Cartoon, toy, video game::-10
+
+Negate Noise
+A small negative multi that subtracts broad conceptually opposite styles provides a significant image quality boost in nearly all styles. Determining what is a conceptually opposite style can be tricky, but broad strokes generally work pretty well.
+
+Example Prompt 18: Tall, well-dressed crime lord and secret warlock in his late thirties, strong jawline, thin mustache, slick black hair combed back::11 Black suit, tailored waistcoat, string tie, broad chest and shoulders, silver skull earring, heavy signet ring with ornate sigil::20 Quiet, confident authority, deep commanding voice, impeccable manners, charm, cold and calculating eyes, dangerous glint, ruthless and cunning reputation::10 In league with insidious dark powers, wielding wicked magic discreetly, such as devil's bargains::27 Inside the Crystal Palace Saloon, luxurious carpeted area with faro tables, elegant chandeliers, richly decorated walls, patrons engaged in gambling and conversation::12 In the artistic style of J.C. Leyendecker and James Bama, combined with the moody, high-contrast lighting of Wes Burt, Paul Bonner, and Lee Bermejo, showcasing the strong, stylized figures of classic illustration with the dramatic, tension-filled atmosphere of modern western art, and a blend of realism and fantasy::12 photographic, colorized, evoking the rich and detailed imagery of wild west photography, capturing the textures, lighting, and atmosphere of the era::8 boardwalk::0.1 illustration, drawing, sketch, digital painting::-18 sepia toned, desaturated::-10
+
+Fine Tune Look
+Subtracting a little of the style you are looking can be used to fine tune the look of your image. A great example of this is subtracting photographic from photographic images gives them a more artistic, filtered, instagram look.
+
+Short Conclusion:
+Creating the perfect Midjourney prompt involves a combination of creativity, precision, and a deep understanding of the Midjourney system's capabilities and limitations. Here is a potential approach based on the information provided so far:
+
+1. Clarify the Subject: Clearly state the main subject or elements you want to be included in the image. This could be anything from a specific object, person, animal, or scene. Be as specific as possible to ensure Midjourney has a clear understanding of what you want.
+2. Describe in Detail: Use vivid and descriptive language to provide as much detail as possible about each element of the image. This could include colors, textures, sizes, positions, emotions, actions, etc. Midjourney responds well to richly detailed descriptions.
+3. Establish the Style: If there's a specific style you want the image to emulate, specify it. This could be a type of art (e.g., surrealist, impressionist, photorealistic), a medium (e.g., oil painting, watercolor, digital art), or even an artist's style (e.g., "in the style of Van Gogh").
+4. Set the Atmosphere and Emotion: Describe the overall mood or emotion of the image. This could be anything from serene and peaceful to eerie and unsettling. This helps Midjourney understand the tone you're aiming for. 
+
+SCENE EXAMPLES: Closed composition, Filmic, Cinematic, Dramatic, Establishing shot, Glamor shot, Portrait, Cinematic haze, Gesture, Time-lapse, Motion capture, High-speed photograph, Stop motion, Bokeh, Film grain, Satellite imagery, Award-winning photography, Wildlife photography, Underwater photography, Action scene
+TIME OF THE DAY EXAMPLES: Golden Hour, High Noon, Afternoon, Mid-Morning, Blue Hour, Sunset, Sunrise, Nighttime
+5. Control the Camera: While not always necessary, you can specify certain photographic elements if they are critical to your vision. These include things like depth of field, aperture, shutter speed, and ISO settings.
+Camera-Settings Include: 
+Colour Film Examples: Kodak Portra 160, Kodak Portra 400, Kodak Portra 800, Kodak Ektachrome 100, Kodak Ektar 100, Lomo 400, Cinestill 800T, Cinestill 50, Agfa Vista 400, Fujichrome Velvia 100, Fujicolor C200, Fujicolor Pro 400H, Fujicolor Superia 1600, Kodak ColorPlus 200, Kodak Gold 200, Kodak Ultramax 400, Lomo 100, Provia 100F, Superia 400
+B&W Film Examples: Ilford HP5 Plus 400, Ilford Pan F Plus 50, Kodak T-Max 400, Kodak Tri-X 400, Ilford Delta 3200, Ilford Delta 100, Fomapan 400, Ilford XP2 400, Neopan Acros 100
+Camera Type Examples: Canon 7s, Canon AE-1, Hasselblad 500cm, Leica A, Leica M3, Leica M6, Mamiya RZ67, Minolta X-700, Nikon F2, Olympus XA, Rolleiflex 3.5F, Yashica T4
+Focal Distance Examples: 14mm, 24mm, 35mm, 50mm, 85mm, 100mm, 200mm, 300mm, 400mm, 500mm, 600mm
+Aperture Examples: f1.4, f2, f2.8, f4, f5.6, f8, f11, f16, f22, f32
+Shutter speed Examples: 1/2, 1/1000, 1/2s, 1/1000s, 1/2 second, 1/1000 second, 1/2 shutter, 1/1000 shutter, 1/2 shutter speed, 1/1000 shutter speed
+LENS FILTER EXAMPLES: Color-gel, Filter, Photographic-filter, Diffusion-filter, Dichroic-filter, UV-filter, Polarizer, Infrared-filter, Neutral density filter,Graduated neutral filter, GND-filter, Astronomical-filter, Coin-filter
+FILM TYPES: DSLR, Night Vision, Drone photography, GoPro Video, Unregistered Hypercan 2, Hyperspectal Imaging, Multispectal Imaging, Schlieren, Disposable Camera, Polaroid, Instax, Lomo, Pinhole Photography, VistaVision, Technirama, Techniscope, Panavision, Ambrotype
+Weather Conditions to Control Lighting, Time of the day to Control Lighting, Combination of Weather Conditions and Time of the day, Assigning a Lighting
+Assigning a Light
+Properly assigning lighting in photography can make a significant impact on the overall quality and feel of a photograph, and requires a keen eye for detail and an understanding of how light behaves in different environments. Effective lighting can help create stunning and visually compelling images. You can include it in the multi prompt. Left side Lighting, Right side Lighting, Overhead Lighting, Underneath Lighting
+
+In general, using any film stock tends to add lots of saturation, contrast, vignette, and grain. For a less-intense result, try a weight.  Weights can also be added to individual photography terms using :: [term]::X Phrasing also changes the influence terms have on your subject. [subject], [term], [subject]:: [term], and [subject]:: style of [term], and other variations all produce differences depending on your subject. While certain popular film stocks may produce expected results, not all films act as expected in Midjourney, probably due to insufficient source material on the internet and/or in the dataset.
+6. Use Weights and Commands: You can use weights (::X where X is a number) to prioritize certain elements or details in your prompt. Commands like '--ar' can be used to specify the aspect ratio of the final image.
+
+7. Negate Unwanted Styles: Use a negative weighting layer to negate styles or elements that are contrary to your desired output. Ensure these terms are opposites of what you want to achieve in your image. 
+
+8. Check and Refine: Review your prompt to make sure it's clear, detailed, and accurately represents the image you have in mind. Refine any vague or confusing parts and make sure it adheres to the formatting rules.
+
+Examples for some special Descriptors:
+Bioluminescence: The emission of light by living organisms, such as fireflies, jellyfish, and certain fungi, as a result of biochemical reactions.
+Chemiluminescence: The emission of light during a chemical reaction, without the need for external energy, like the glow sticks used for entertainment or emergency lighting.
+Phosphorescence: A process where certain materials absorb energy and then slowly release it as light over an extended period, like glow-in-the-dark toys and watch dials.
+Fluorescence: The emission of light by a substance when it is exposed to ultraviolet or other high-energy radiation, often seen in minerals like fluorite and some biological specimens under UV light.
+Triboluminescence: The generation of light as a result of mechanical action, such as crushing, breaking, or rubbing certain materials together, like the "Wint-O-Green" Life Savers candy sparks in the dark.
+Radioluminescence: The emission of light as a result of exposure to ionizing radiation, like tritium-filled gas tubes in self-illuminating watch dials or the glow of radium paint in vintage timepieces.
+Electroluminescence: The emission of light in response to an electric current or a strong electric field, commonly seen in LED lights and organic light-emitting diodes (OLEDs).
+Thermoluminescence: The emission of light from a material when it is heated, often used in dating archaeological artifacts and detecting radiation exposure in dosimetry.
+Cherenkov radiation: The bluish glow emitted when charged particles travel through a medium (like water or air) at a speed greater than the speed of light in that medium, often seen in nuclear reactors and high-energy physics experiments.
+Photoluminescence: A process in which a substance absorbs photons (light energy) and re-emits them, which includes both fluorescence and phosphorescence as subcategories.
+Scintillation: The flash of light produced when a material is struck by ionizing radiation, like the flashes in a scintillator used for radiation detection and measurement.
+Sonoluminescence: The emission of light resulting from the imploding bubbles in a liquid when excited by sound waves, a phenomenon observed in sonochemistry and certain biological processes.
+Lyoluminescence: The light emission that occurs when a solid material, usually a crystal, is dissolved in a liquid, often used in radiation dosimetry and analytical chemistry.
+Mechanoluminescence: The generation of light as a result of mechanical action on certain materials, which includes triboluminescence and fractoluminescence (light emitted due to fracturing or cracking of a material).
+Electrochemiluminescence: The emission of light produced during an electrochemical reaction, often used in sensors, bioassays, and analytical instruments for detecting and measuring various substances.
+Photobioluminescence: The light emission by a bioluminescent organism upon exposure to an external light source, a phenomenon observed in certain deep-sea creatures.
+
+
+Information::X the X stands for the layerweigt you set for this layer in the multiprompt
+Here is another approach of how to build a prompt: Example Parts of a Multi:
+[Subject, Verb, 3 Objects, and Geographic location: Referencing regions and countries will influence the style. Style Examples include Photography Categories, Painting Techniques, Japanese Ukiyo-e prints, African tribal art, or Abstract American Expressionism, London Contemporary art, New York Art, geographical locations, and even more specific Categorys: like French illustrators or Russian Childbook Illustrators. Please choose what has the optimal effective impact for the visual styles you want to achieve for the final Image.)]::X 
+[Gender, Body Shape Description, Skin Color, Clothing]::X 
+
+[Emotion, Facial Expression, Eyes, Mouth and Accesoires, Gestures]::X 
+[Related Themes, Art movement: Identifying the art movement in the prompt will introduce its style and techniques. Examples include Impressionism, Surrealism, or Pop Art and more, Choose the best Options.]::X 
+[Media type: Identifying the medium of an image will determine its aesthetic. Examples include photography, illustration, comic, concept art, storyboard, sculpture, and more. Stay creative and even Combine different Styles. Choose the best Options.]::X 
+[Media title: Identifying a media influence will influence its look. For example, from Spirited Away or from The Wizard of Oz or from Sid Meier's Civilization or from the video game Joust or more. Choose the best Options.]::X
+In the style of [Artist name (Referencing the name or the work of a specific artist who fill roughly invoke their unique style. Examples include: Vincent van Gogh, Frida Kahlo, Picasso, KAWS, or Banksy and all other Artist you you can think of. Choose the most effective Options and mix Artist 1 with picked Artist Name 2, and picked Artist 3]::X 
+[Technique: (Referencing techniques will add that style to the image. Examples include impasto, pencil sketch, watercolor, or digital art and more. Choose the best Options.)]::X 
+[Time period: Identifying the historical context of an image will invoke its aesthetic. For example, images from the Renaissance, Baroque, Modernist periods and more. Choose the best Options.]::X
+In the style of [create a style using two references or more: art movements, media types, art techniques, artist names, media genres, media titles. If it enhances the desired overall effect, you can also combine different suggestions of yours here. Write the chosen style exclusively in a visual language that describes the qualities you want to depict.] ::X 
+[Perspective, Image Setting, Camera Setting and Special Effects]::X 
+[Negative Terms for Noise Negation ]::-X 
+give me a new muti for the water
+
+And another Approach: Parts of a Prompt:
+Strong Subject (focus most obvious feature, what is it you want to see? Is it a Person, an animal, a fantasy creature, a website, a vector illustration or a high definition photography? be really specific a.e. “is your main Subject a landscape or is it a volcano in a landscape?”, “is your main Subject a woman or a high fashioned model”, “a cat or a tiger?” the words you use matter to Midjourney. If you have no good ideas, start simple. Any words that come to mind. A bunch of them so we have some choices. If you choose right one word will get you closer to our final vision. If you can feel stuck you can also ask me. For words)
+
+Once you have identified the Subject, please start with a
+Description (there are a lot different ways you can describe the subject. We are looking for a handful of really rich visual descriptors. For the start three to ten words. Be creative. One of my favorite quotes is by the writer Anton Chekhov “Don’t tell me the moon is shining; show me the glint of light on broken glass.” For your Description dont use a lot of words, better choose the right Descriptors. Here is an example of Categories you can work with:
+For People: personality, gender, age, ethnicity, occupation, physical apperance, body shape, key features. There are many ways to describe a person. Please look in all sections you can think about.
+
+The point is to be as descriptive as possible. 
+Once you have finished the Description, please start with a
+Context or Vibe (Now describe what the subject is. This is the background, the atmosphere, what is going on?, what is the subject doing? Action? What is the Weather like? All this adds to the vibe of the whole Image. Use sensory language, engage all of the senses when describing the scene. Describe the lighting, the colors, the texture, the overall feel of the environment, there are no shortage of lightning terms you can use. Popular prompts include as example: dramatic lighting, volumetric lighting, cinematic or studio lighting or even ailhouette and “kira squirrel”. Use all colored terms freely to create just the vibe you want. As example: pastel pink and bright candy apple red have different vibes. Use common terms to describe colors just as you would describe them to a friend and dont forget textures. There is a suprising number of textures recognized by Midjourney. The Descriptions sets the vibe as example romantic and dreamy, chic and elegant or maybe creepy and mysterious. You can create every vibe you want. Just know exactly what you want.)
+
+Once you have finished the Context, please start with a
+Style (start with a medium as example: drawing, painting, photograph you can use all possible art termes. You can also look up different artist names, analyze the style and describe it in qualities here in the style section. The point is to be as descriptive as possible. You can also look up different artist styles and combine them. 
+Really zoom in on the detailes you want. Spare every words that dont directly describe a visual effect out. Try adding and also removing text from your prompt. You can also change word order a bit but if you organize your prompt into sections like: Strong Subject, Description, Context or Vibe, Style you are also able to weight these sections regarding the multiprompt theory). By default each section of the final prompt is weighted ::1 but you can change this. If you want more weight on the subject for instance add a higher number. This is especially helpful when the prompt isnt picking up on something important.
+Midjourney is set up for natural language so talk if you’re describing an Image to a friend. but just like when talking to a friend the length of your prompt matters too. Too short adds not enough information to the final image and too long and midjourney wont get everything and skip parts.
+
+More Conclusions:
+The order of the content should be more logical and easy to understand, with a smooth flow.
+Descriptive phrases should be clear and concise, with no repetition or redundancy.
+The use of commas and other punctuation should be consistent and help with readability.
+Negative layers should be simplified and straightforward.
+Avoid using overlapping terms and concepts in the same prompt.
+Make sure to keep the structure of the prompt organized and easy to follow.
+
+
+More curated Examples of Prompts without layerweights:
+Section 1: Game Art
+
+1. Pixel Art:
+Versatile pixel art prompts for delicious pixel backgrounds. Try switching between 8-bit pixel art / 16-bit pixel art / 32-bit pixel art. This really does make a difference on the fidelity of the final image! Example Prompts:
+16-bit pixel art, outside of café on rainy day, light coming from windows, cinematic still, hdr
+16-bit pixel art, island in the clouds, by studio ghibli, cinematic still, hdr
+16-bit pixel art, cute interior of Japanese apartment, soft colors
+16-bit pixel art, neo tokyo cityscape 2048, cinematic still
+32-bit pixel art, neo tokyo street in the rain, neon signs, gritty, 2048
+
+2. MOBILE GAME CHARACTERS
+The Clash of Clans style has become a mainstay of mobile games in the past few years. Generate Clash style characters, perfect for adding a touch of personality to your game world. Example Prompts
+Tyrion Lannister, isometric, full body, blender 3d, style of artstation and behance, Disney Pixar, cute
+Daenerys Targaryen, isometric, full body, blender 3d, style of artstation and behance, Disney Pixar, Mobile game character, clash royale, cute
+Sansa Stark, isometric, full body, game character, Clash Royale, blender 3d, style of artstation and behance, Vector art
+Lord Commander Jon Snow, full body, blender 3d, artstation and behance, Disney Pixar, Mobile game character, isometric, clash royale, cute
+Bran Stark, full body, sitting, game, blender 3d, style of behance. Style of Clash Royale, isometric
+Jamie Lannister, full body, blender 3d, artstation and behance, Disney Pixar, Mobile game character, isometric, clash royale, cute
+White direwolf game of thrones, blender 3d, style of artstation and behance. Style of Clash of Clans and Disney Pixar, isometric Vector art
+
+3. GAME ITEM COLLECTIONS
+Assemble collections of multiple items for use in 3D games, with a mobile gaming aesthetic. Example Prompts
+game sheet of different types of swords and axes, light background, clay render, oily, shiny, bevel, blender, style of Hearthstone
+sheet of shiny treasure chests with gold coins, clay, render, game icons, game asset, blender, oily, shiny, bevel, smooth rendering, hearthstone style
+sheet of cafe pastries, game asset, game icon, clay render, blender, oily, shiny, bevel, smooth rendering, style of Hearthstone
+game sheet of different types of enchanted potions, light background, clay, oily, shiny, game icon, blender, style of Hearthstone
+
+sheet of different types of swords and axes, clay render, blender, oily, shiny, bevel, smooth rendering, style of Hearthstone
+game sheet of paladin armor, light background, clay render, oily, shiny, bevel, blender, style of Hearthstone
+game sheet of wizard robes, light background, clay render, oily, shiny, bevel, blender, style of Hearthstone
+
+Section 2: Illustration
+
+4.DREAMY WATERCOLOR SCENES
+Transform any subject into beautiful, dreamy watercolor paintings, that will transport you a simpler, peaceful world. A very versatile prompt that I loved to experiment with! Example Prompts:
+light watercolor, children playing at the beach, bright, white background, few details, dreamy Studio Ghibli
+light watercolor, children playing by the riverbank, white background, few details, dreamy, Studio Ghibli
+light watercolor, inside of a church with beautiful stained glass windows, bright, white background, few details, dreamy, Studio Ghibli
+light watercolor, boats at the harbor, white background, few details, dreamy, Studio Ghibli
+light watercolor, cat and a dog sleeping, bright, white background, few details, dreamy, Studio Ghibli
+light watercolor, Bamboo forest, bright, side view,simple white background,Small river, few details, Ghibli, fairy tale
+light watercolor, outside of a coffeeshop, bright, white background, few details, dreamy, Studio Ghibli
+light watercolor, children playing at the beach, bright, white background, few details, dreamy, Studio Ghibli
+light watercolor, glass fishbowl containing tropical fish, white background, few details, dreamy, Studio Ghibli
+
+5.SIMPLE TECH BRAND ILLUSTRATIONS
+Create sleek and modern tech brand illustrations with a minimal aesthetic. Example Prompts:
+simple minimal tech illustration, man jogging by the waterfront, by slack and dropbox, style of behance
+tech illustration, woman at desk surrounded by succulents, simple minimal, by slack and dropbox, style of behance
+simple minimal tech illustration, man getting into a car, by slack and dropbox, style of behance
+tech illustration, woman leaving her home, simple minimal, by slack and dropbox, style of behance
+tech illustration, boy running with dog, simple minimal, by slack and dropbox, style of behance
+
+6.DETAILED TECH BRAND ILLUSTRATIONS
+Generate modern and appealing illustrations for tech brands, with a simple and vector-based aesthetic. Example Prompts:
+generic productivity illustration for a tech company, by slack and behance
+user being inspired by the possibilities of an app, illustration for a tech company, by slack and dropbox, style of behance
+user being inspired by the possibilities of an app, illustration for a tech company, by slack and dropbox, style of behance
+
+users at a coffeeshop, illustration for a tech company, by slack and dropbox, style of behance
+Falling in love with your company culture, illustration for a tech company, by slack and dropbox, style of behance
+generic productivity illustration for a tech company, by slack and behance
+productivity illustration for a tech company, by slack and dropbox, style of behance
+
+
+7.19-CENTRY BOTANICAL ILLUSTRATIONS
+Create detailed, beautiful 19th-century botanical illustrations in the style of Pierre-Joseph Redoute and other Titans of botanical illustration. Example Prompts:
+pumpkin varieties, botanical illustration, white background, style of Pierre-Joseph Redoute
+botanical illustration, white background, types of tulips
+different types of mushrooms, botanical illustration, white background, style of Pierre-Joseph Redoute
+peach tree branch, botanical illustration, white background, style of Margaret Mee
+cherry varieties, botanical illustration, white background, style of Pierre-Joseph Redoute
+pinecone varieties, botanical illustration, white background, style of Margaret Mee
+The Butterflies of Europe, botanical illustration, white background, style of Pierre- Joseph Redoute
+
+8.FLORAL TATTOO DESIGNS
+Create beautiful and artistic floral tattoos that look great straight out of the box. Example Prompts:
+minimalist rose tattoo design, lines, minimal, black and white, white background
+rose tattoo design, lines, minimal, black and white, white background
+minimalist lily tattoo design, lines, minimal, black and white, white background
+
+9.MINIMAL LINE & SHAPE TATTOO DESIGNS
+Create unique and minimalist tattoos using lines and shapes in abstract compositions. Example Prompts:
+minimal tattoo, symmetrical, line, dots, square, triangle, circle, black and white, white background
+minimal tattoo, symmetrical, line, dots, square, triangle, circle, black and white, white background
+minimal tattoo, symmetrical, line, dots, square, triangle, circle, black and white, white background
+
+SECTION 3: ARCHITECTURE
+
+10. MOUNTAIN EMBEDDED ARCHITECTURE
+Create stunning images of structures built and integrated into mountains and cliffs, by award winning architects. The ideal residence for villains.
+resort embed into a cliff designed by Kengo Kuma, architectural photography, style of archillect, futurism, modernist architecture
+modern resort, staggered and embedded into the side of a mountain, architectural photography, style of archillect, futurism, modernist architecture
+hotel designed by Ando Tadao, organic, embed into cliffside, architectural photography, style of archillect, futurism, modernist architecture
+modern villa embedded into the side of a cliff, architectural photography, style of archillect, futurism
+resort embed into a cliff designed by Kengo Kuma, architectural photography, style of archillect, futurism, modernist architecture
+
+11. MODERNIST ORGANIC ARCHITECTURE
+Generate architectural designs by award winning architects, for structures that are organically embedded into the terrain. Example Prompts:
+organic house embedded into the hilly terrain designed by Kengo Kuma, architectural photography, style of archillect, futurism, modernist architecture
+organic house embedded into the hilly terrain designed by Kengo Kuma, architectural photography, style of archillect, futurism, modernist architecture
+organic resort embed into a series of hills, designed by Ando Tadao, architectural photography, style of archillect, futurism, modernist architecture3d, style of artstation and behance, Vector art
+organic house embedded into a grassy hill, designed by Kazuyo Sejima and Ryue Nishizawa, architectural photography, style of archillect, futurism, modernist architecture
+museum designed by Ando Tadao, organic, embed into side of a hill, architectural photography, style of archillect, futurism, modernist architecture
+
+12. INTERIOR DESIGN RENDERINGS
+Get inspiration for modern interior design with this highly versatile prompt. Example Prompts:
+Interior Design, a perspective of a study, modernist, large windows with natural light, Light colors, plants, modern furniture, modern interior design
+Interior Design, a perspective of a study, modernist, large windows with natural light, Light colors, plants, modern furniture, modern interior design
+Interior Design, a perspective of a living room and a kitchen with an island, large windows with natural light, Light colors, vegetation, modern furniture, skylight, modern minimalistic design
+Interior Design, a perspective of a living room and a kitchen with an island, large windows with natural light, Light colors, vegetation, modern furniture, skylight, modern minimalistic design
+Interior Design, a perspective of a creative loft, large windows with natural light, industrial ceiling, modern furniture, skylight
+ 
+
+13. CUTE TINY ISOMETRIC ARCHITECTURE
+Generate tiny and intricate isometric architecture by award-winning architects. Example Prompts: 
+isometric clean art of a museum designed by kengo kuma, blender
+isometric clean art of exterior of condo designed by kengo kuma, blender
+isometric clean art of exterior of condo designed by kengo kuma, blender
+isometric clean art of exterior of small apartment designed by kengo kuma, tiny model
+isometric clean art of outside of airport designed by eero saarinen, blender
+ 
+SECTION 4:ARTS & CRAFTS
+ 
+14. LAYERED PAPER ART
+Create layered paper art with a ton of dimensionality and personality. You can also add beautiful lighting effects! Example Prompts:
+Hogwarts, castle on a hill, from Harry Potter, layered paper art, diorama, shadowbox, volumetric lighting, product photography
+Harry potter on broomstick in sky, layered paper craft, paper art, diorama
+hagrid on motorcycle in the air, layered paper craft, diorama, paper art, hdr
+paper material, dumbledore in his study, layered paper craft, diorama
+ron weasley wearing christmas sweater, layered paper craft, diorama
+hermine granger with books, layered paper craft, diorama
+Diagon alley from Harry Potter, layered paper craft, paper art, diorama, underground
+royal crest of gryffindor lion, layered paper craft, diorama, paper art
+royal crest of ravenclaw eagle, layered paper craft, diorama, paper art
+crest of slytherin, symmetrical serpent, layered paper craft, diorama, paper art
+crest of hufflepuff, symmetrical badger head, layered paper craft, diorama, paper art
+ 
+15. VINTAGE US POSTAL STAMPS
+Generate a distinct vintage United States postage stamp featuring any subject of your choice. Example Prompts:
+vintage United States Postage Stamp, 2 cent stamp, Obi Wan Kenobi, blue ink, line engraving, intaglio
+vintage United States Postage Stamp, 2 cent stamp, Dark Vader, red ink, line engraving, intaglio
+vintage United States Postage Stamp, 3 cent stamp, Master Yoda using the force, green ink, line engraving, intaglio
+vintage United States Postage Stamp, 2 cent stamp, Princess Leia, brown ink, line engraving, intaglio
+vintage United States Postage Stamp, 3 cent stamp, Stormtrooper full body, purple ink, line engraving, intaglio
+ vintage 2 cent postage stamp of Abe Lincoln, red ink, line engraving, intaglio
+vintage 2 cent postage stamp of Captain Jack Sparrow, blue ink, line engraving, intaglio
+clean vintage 5 cent postage stamp of Usain Bolt doing a victory pose, green ink, line engraving, intaglio
+vintage 2 cent postage stamp of Louis and Clark exploring, orange ink, line engraving, intaglio
+
+16. INFINITE HOLIDAY PATTERNS
+Add some festive cheer to your designs with this simple repeating pattern prompt!
+The sides match up, so you can make wrapping paper and other print designs up to any dimensions. Example Prompts:
+simple seamless doodle halloween themed pattern
+simple seamless doodle easter themed pattern
+simple seamless doodle christmas themed pattern
+simple seamless doodle halloween themed pattern
+simple seamless valentines day themed pattern
+ 
+17. T-SHIRT GRAPHICS
+Create bold Neon/Synthwave T-shirt graphics that are perfect for print-on- demand services. Example Prompts:
+16-bit pixel art, outside of café on rainy day, by studio ghibli, cinematic still
+tshirt vector, darth vader synthwave, vivid colors, detailed
+tshirt vector, malibu miami vice monkey, vivid colors, detailed
+tshirt vector, 80s retrowave dinosaur, vivid, pink and blue lighting, 90s
+tshirt vector, terminator graphic, synthwave, vivid colors, detailed
+
+18. SUPER CUTE ANIMAL STICKERS
+Create adorable animal stickers that are perfect for producing and selling on Etsy and other online marketplaces. Example Prompts:
+sticker design, super cute baby pixar style white rabbit, wearing a cyan sweater, vector
+sticker, A super cute baby pixar style fox, vector
+sticker, A super cute baby pixar style elephant, vector
+sticker, A super cute baby pixar style dolphin, vector
+sticker design, super cute baby pixar style otter, wearing a beanie, vector
+
+19. PLANNING & ORGANIZATION STICKERS
+Design playful organization stickers that help people plan their busy lives. Perfect for selling on Etsy and similar sites. Example Prompts:
+sticker design, lined paper for writing, cute, vector
+sticker design, lined paper for writing, cute, vector
+sticker design, a sheet of lined paper, cute, vector
+sticker design, lined paper for writing cute, vector
+sticker design, lined paper for writing, cute, vector
+
+20. GRAYSCALE COLORING PAGES
+Generate clean and crisp grayscale coloring book pages that can be printed for use at home, or turned into coloring book products to sell. Example Prompts:
+clean coloring book page of a lion, black and white
+clean coloring book page of a boot with a flower growing out of it, black and white
+clean coloring book page of a flying whale
+clean coloring book page of a Canada Goose, black and white
+Clean coloring book illustration of a Nothern Cardinal, black and white
+ 
+21.SIGNET RINGS
+Create mockups of cool and unique ring prototypes with this simple prompt. Example Prompts:
+Silver Direwolf signet ring
+royal family crest, signet ring
+royal lion, signet ring
+ 
+
+22. CULTURAL PATTERNS
+Create repeating patterns inspired by different cultures.Example Prompts:
+repeating japanese pattern
+repeating Chinese pattern
+repeating Nordic pattern
+
+SECTION 5: PORTRAIT PHOTOGRAPHY
+ 
+23. INTIMATE BLACK & WHITE PORTRAITS
+Award-winning, intimate and expressive black and white portrait photography. Example Prompts:
+Jean-Michel Basquiat, half body, black and white portrait photography, depth of field, f2.8, 50mm lens, exquisite detail, hdr, deep shadows, award-winning photography, high-sharpnes
+black and white portrait photography, Amy Winehouse, depth of field, f2.8, 50mm lens, exquisite detail, hdr, deep shadows, award-winning photography, high-sharpness
+Kurt Cobain, portrait photography, 3 quarter lighting, depth of field, f2.8, 50mm lens, exquisite detail, intricately-detailed, award-winning photography, high-contrast, High-sharpness
+brad pitt, black and white portrait photography, 3 quarter lighting, depth of field, f2.8, 50mm lens, exquisite detail, intricately-detailed, award-winning photography, high-contrast, High-sharpness
+tom hanks, black and white portrait photography, 3 quarter lighting, depth of field, f2.8, 50mm lens, exquisite detail, intricately-detailed, award-winning photography, high-contrast, High-sharpness
+ 
+24. DETAILED CLOSE-UP PORTRAITS
+Close up portraits of people with striking depth-of-field effects (a sharp foreground and blurry background). Example Prompts:
+close up portrait of an white haired old lady, Exquisite detail, 30- megapixel, 4k, 85-mm-lens, sharp-focus, f:8, ISO 100, shutter-speed 1:125, diffuse-back-lighting, award-winning photograph, small-catchlight, High-sharpness, facial-symmetry
+close up portrait of a generic female, Exquisite detail, 30-megapixel, 4k, 85- mm-lens, sharp-focus, f:8, ISO 100, shutter-speed 1:125, diffuse-back-lighting, award-winning photograph, small-catchlight, High-sharpness, facial-symmetry
+close up portrait of an white haired old man, Exquisite detail, 30-megapixel, 4k, 85-mm-lens, sharp-focus, f:8, ISO 100, shutter-speed 1:125, diffuse-back- lighting, award-winning photograph, small-catchlight, High-sharpness, facial- symmetry
+
+25. VINTAGE POLAROID PHOTOS
+For some reason – vintage polaroids always come out looking great! Example Prompts:
+blonde girl leaning on table and smiling at camera, detailed facial features, detailed eyes, polaroid, 1991
+Brother and sister playing in the yard, early 2000s, flash photography, polaroid
+woman playing solitaire at a desk,fuji color film, polaroid, 1999
+ 
+SECTION 6: PHOTOGRAPHY
+
+26. BEAUTIFUL, REALISTIC LANDSCAPE PHOTOGRAPHY
+Create stunning, award-winning landscape photos. From sweeping mountain vistas to tranquil forest scenes, this prompt will help you capture the beauty of the natural world. Example Prompts:
+The Grand Canyon at sunrise, Canon RF 16mm f:2.8 STM Lens, hyper realistic photography, style of unsplash and National Geographic
+Sea of Endless waves with the sparkling reflection of the sun, golden hour, Canon RF 16mm f:2.8 STM Lens, hyperrealistic photography, style of unsplash and National Geographic
+hills of the scotland highlands, misty fog, Canon RF 16mm f:2.8 STM Lens, award winning photography, by national geographic and upsplash
+beach during the golden hour, Canon RF 16mm f:2.8 STM Lens, hyperrealistic photography, style of unsplash and National Geographic
+Arctic beautiful landscape, Canon RF 16mm f:2.8 STM Lens, hyperrealistic photography style of unsplash and National Geographic
+Cherry Blossoms in Hokkaido in the wintertime, Canon RF 16mm f:2.8 STM Lens, hyperrealistic photography, style of unsplash and National Geographic
+view of the northern lights at night time, seen in Alaska, Canon RF 16mm f:2.8 STM Lens, hyperrealistic photography, style of unsplash and National Geographic
+ 
+27.HYPER-REALISTIC WATER EFFECTS
+Capture the beauty and power of water with this realistic water prompt with radiant sunlight effects. Example Prompts:
+ball of water suspended in the air, ripples and splash on surface, sunlight gleaming, with sparkling crisp radiant reflections, Canon 35mm lens, hyperrealistic photography, style of unsplash
+ball of water suspended in the air, ripples and splash on surface, with sparkling, crisp radiant reflections, sunlight gleaming, Canon 35mm lens, hyperrealistic photography, style of unsplash
+water splash, with sparkling, crisp radiant reflections, sunlight gleaming, Canon 35mm lens, hyperrealistic photography, style of unsplash
+ball of water suspended in the air, ripples and splash on surface, with sparkling, crisp radiant reflections, sunlight gleaming, Canon 35mm lens, hyperrealistic photography, style of unsplash
+water with sparkling, crisp radiant reflections, sunlight gleaming, Canon 35mm lens hyperrealistic photography, style of unsplash
+
+27.a: Example Prompts for REALISTIC TILES (byKASZ):
+Aerial drone photography of a holographic iridescent liquid::20 Capturing intricate details, vivid colors, and a gooey, viscous texture from above with a telephoto lens::15 Emphasizing the gentle, flowing, and adhesive nature of the iridescent liquid, with a focus on its stretching and waving properties::16 High-resolution image, showcasing the liquid's consistent, fluid dynamics as it effortlessly pours and covers the entire surface::12 The liquid's visible properties are unified, revealing a glistening surface, soft bubbling areas, and delicate strands, all interacting harmoniously as the liquid moves::8 Smooth, silky, and flowing textures, enhancing the sensation of the mesmerizing substance::10 Palette dominated by iridescent colors, creating a stunning visual effect, with subtle gradients for a more natural and calming appearance::18 Soft, diffused lighting creating a serene and soothing atmosphere, with larger distances between any bumps or raised areas in the liquid's surface::20 DJI Phantom 4 Pro, ideal drone for capturing high-quality close-up images::3 Camera settings: aperture f/2.8, shutter speed 1/125 sec, ISO 100, telephoto lens for close-up detail and depth of field::4 Crumbly, drapling, raised areas, brittle textures::-1.5 Frosty, icy appearances::-1.5 Food elements not resembling the iridescent liquid::-1 Built environments, urban scenes, or cityscapes::-2.4 Lush landscapes, forested areas, or plant life::-2.4 Ocean, sea, or water-focused visuals::-1.2 Terrain with elevation, rocks, or roughness::-1 Obstructive elements, such as boulders or stones::-1 Simplistic, 2D visual styles, including illustrations, drawings, or paintings, and marble or swirl patterns::-12 Dark brown or black spots, excessively pale or washed-out hues::-10 Dull, monochrome, or boring::-1 Flat, blur, or uniform::-1.5 Painterly, 3D rendered, or graphic design styles::-3 Unvarying, uninteresting, or repetitive patterns::-2.5 Dark shadows or darkness::-2 Limited color range, excessively pale, or overly dark colors::-10 --no watermark text word signature logo branding --tile
+
+Aerial drone photography of a creamy, viscous liquid::20 Capturing intricate details, subtle colors, and a gelatinous and pudding-like texture from above::15 Emphasizing the gentle, flowing, and adhesive nature of the viscous liquid, with a focus on its stretching and waving properties::16 High-resolution image, showcasing the liquid's consistent, fluid dynamics as it effortlessly pours and covers the entire surface::12 The liquid's visible properties are unified, revealing a glistening surface, soft bubbling areas, and delicate strands, all interacting harmoniously as the liquid moves::8 Smooth, silky, and flowing textures, reminiscent of a thick, creamy pudding or slightly wobbly gelatin::10 Palette dominated by soft yellow-beige, pastel cheddar cheese color, warm golden tones, and subtle gradients for a more natural and calming appearance::18 Soft, diffused lighting creating a serene and soothing atmosphere, with larger distances between any bumps or raised areas in the liquid's surface::20 DJI Phantom 4 Pro, ideal drone for capturing high-quality close-up images::3 Camera settings: aperture f/2.8, shutter speed 1/125 sec, ISO 100, macro lens for close-up detail and depth of field::4 Crumbly, drapling, raised areas, brittle textures::-1.5 Frosty, icy appearances::-1.5 Food elements not resembling the creamy, viscous liquid::-1 Built environments, urban scenes, or cityscapes::-2.4 Lush landscapes, forested areas, or plant life::-2.4 Ocean, sea, or water-focused visuals::-1.2 Terrain with elevation, rocks, or roughness::-1 Obstructive elements, boulders or stones::-1 Simplistic, 2D visual styles, including illustrations, drawings, or paintings, and marble or swirl patterns::-12 dark brown and black spots, excessively pale or washed-out hues::-10 --no watermark text word signature logo branding –tile
+Aerial drone photography of a serene, iridescent water surface with delicate soap bubbles::20  in the style of focus stacking for an incredibly sharp and detailed image from foreground to background::15 Showcasing the harmonious interaction of bubbles and water, emphasizing their shimmering, floating properties::16 High-resolution composition highlighting the glistening surface, soft froth, and iridescent, opalescence and holographic bubbles, conveying a sense of tranquility::12 Fluid, silky textures of water and bubbles create an enchanting, mesmerizing scene::10 Color palette dominated by iridescent hues, with subtle gradients for a natural and calming appearance::18 Soft, diffused lighting enhancing the soothing atmosphere and gentle surface movements::20 DJI Phantom 4 Pro for high-quality, close-up imagery::3 aperture f/2.8, shutter speed 1/125 sec, ISO 100 and focus stacking for maximum detail and depth of field::4  Rigid, coarse textures, Frozen, icy surfaces, Unrelated food elements, Rocky and rugged landscapes, Obstructions, like boulders and stones, oceans, seas::-1 Urban environments or cityscapes, Dense vegetation or forests::-2.4 Dark, Blurred, washed-out colors or black spots::-10 Flat, 2D visual styles, such as illustrations or paintings, and intricate patterns, indistinct areas, Repetitive, Rendered, graphic design styles::-12 --no watermark text word signature logo branding --tile
+Aerial drone photography of a serene, multicolored soap bubble-filled water surface with abundant swirling and soft white frothy expanded foam, inspired by the lightweight appearance of clouds::20 Focus stacking for an incredibly sharp and detailed image from foreground to background::15 Showcasing the harmonious interaction of iridescent soap bubbles and cloud-like soft white frothy water, emphasizing their shimmering, floating properties::16 High-resolution composition highlighting the glistening surface, abundant soft white froth, and iridescent, opalescent, and holographic bubbles, conveying a sense of tranquility and weightlessness::12 Fluid, silky textures of water, bubbles, and gently frothy expanded foam create an enchanting, mesmerizing scene, evoking the softness and lightness of clouds::10 Color palette dominated by iridescent hues, multicolored soap bubbles, and soft white cloud-like foam, with subtle gradients for a natural and calming appearance::18 Soft, diffused lighting enhancing the soothing atmosphere and gentle surface movements::20 DJI Phantom 4 Pro for high-quality, close-up imagery::3 aperture f/2.8, shutter speed 1/125 sec, ISO 100 and focus stacking for maximum detail and depth of field::4 Rigid, coarse textures, Frozen, icy surfaces, Unrelated food elements, Rocky and rugged landscapes, Obstructions, like boulders and stones, oceans, seas::-1 Urban environments or cityscapes, Dense vegetation or forests::-2.4 Dark, Blurred, washed-out colors or black spots::-10 Flat, 2D visual styles, such as illustrations or paintings, and intricate patterns, indistinct areas, Repetitive, Rendered, graphic design styles::-12 --no watermark text word signature logo branding –tile
+Aerial drone photography capturing vivid colors on a surface divided into sharp and angular shapes, inspired by hard-edge painting, algorithmic artistry, and abstract expressionist explosions::20 Showcasing bright red, bright orange, and vivid pink colors, creating a feeling of passion and energy, with crystal-like structures::15 Dynamic shapes with flowing curves and curved lines, guiding the eye through the composition::16 High-resolution image revealing harmoniously connected elements, representing self-love, self-confidence, and positive energy::12 Smooth transitions and subtle color gradations, soothing the eye and creating a pleasant balance::10 DJI Phantom 4 Pro, ideal drone for capturing high-quality close-up images::3 Camera settings: aperture f/2.8, shutter speed 1/125 sec, ISO 100, macro lens for close-up detail and depth of field::4 Dull, monochrome, or washed-out colors, unrelated visuals::-1.5 Soft, rounded shapes, or organic forms::-1.5 Food elements not resembling the vivid, angular shapes::-1 Built environments, urban scenes, or cityscapes::-2.4 Lush landscapes, forested areas, or plant life::-2.4 Ocean, sea, or water-focused visuals::-1.2 Terrain with elevation, rocks, or roughness::-1 Obstructive elements, such as boulders or stones::-1 Simplistic, 2D visual styles, including illustrations, drawings, or paintings, and marble or swirl patterns::-12 Dark brown or black spots, excessively pale hues::-10 --no watermark text word signature logo branding --tile
+Aerial drone photography capturing vibrant red chillies floating above a soft fur surface::20 The chillies casting small shadows on the smooth and soft short fur below::18 The fur is in a subtle color inspired by ecru, pink, and lavender, complementing and highlighting the bright red chillies without blending in::20 High-resolution image emphasizing intricate details of the chillies, including their shiny, smooth, and slightly wrinkled surfaces, as well as the tactile and visual qualities of the fur, showcasing its warmth, velvety texture, and cozy nature in a minimalist and balanced design::16 Natural lighting enhancing the floating effect and the bright red hues of the chillies, while also emphasizing the fur's texture::12 Contrasting the smoothness of the fur with the shiny surfaces of the chillies, maintaining a harmonious overall pattern::10 Imagination and interpretation-inspired visuals, adding depth and intrigue to the image::6 DJI Phantom 4 Pro, ideal drone for capturing high-quality close-up images from above::3 Camera settings: aperture f/2.8, shutter speed 1/125 sec, ISO 100, macro lens for close-up detail and depth of field::4 Simplistic, monochrome, or washed-out colors::-1.5 Hard, coarse textures, or icy surfaces::-1.5 Food elements not resembling the fur or chillies::-1 Built environments, urban scenes, or cityscapes::-2.4 Lush landscapes, forested areas, or plant life::-2.4 Ocean, sea, or water-focused visuals::-1.2 Terrain with elevation, rocks, or roughness::-1 Obstructive elements, such as boulders or stones::-1 Simplistic, 2D visual styles, including illustrations, drawings, or paintings, and marble or swirl patterns::-12 Dark brown or black spots, excessively pale hues, or any color that blends with the red chillies and fur::-10 --no watermark text word signature logo branding –tile
+Aerial drone photography capturing vibrant red chillies floating above a dry desert floor::20 The chillies casting small shadows on the cracked and parched desert ground below::18 The desert floor is in a subtle color palette inspired by earthy tones, complementing and highlighting the bright red chillies without blending in::20 High-resolution image emphasizing intricate details of the chillies, including their shiny, smooth, and slightly wrinkled surfaces, as well as the textured and rough qualities of the desert floor in a minimalist and balanced design::16 Natural lighting enhancing the floating effect and the bright red hues of the chillies, while also emphasizing the desert floor's texture::12 Contrasting the roughness of the desert floor with the shiny surfaces of the chillies, maintaining a harmonious overall pattern::10 Imagination and interpretation-inspired visuals, adding depth and intrigue to the image::6 DJI Phantom 4 Pro, ideal drone for capturing high-quality close-up images from above::3 Camera settings: aperture f/2.8, shutter speed 1/125 sec, ISO 100, macro lens for close-up detail and depth of field::4 Simplistic, monochrome, or washed-out colors::-1.5 Soft, fluffy, or velvety textures::-1.5 Food elements not resembling the desert floor or chillies::-1 Built environments, urban scenes, or cityscapes::-2.4 Lush landscapes, forested areas, or plant life::-2.4 Ocean, sea, or water-focused visuals::-1.2 Terrain with elevation, rocks, or roughness::-1 Obstructive elements, such as boulders or stones::-1 Simplistic, 2D visual styles, including illustrations, drawings, or paintings, and marble or swirl patterns::-12 Dark brown or black spots, excessively pale hues, or any color that blends with the red chillies and desert floor::-10 --no watermark text word signature logo branding --tile
+28. CUTE MINI-SUCCULENTS & PLANTS
+Generate tiny succulents and plants with a close-up miniature photography style. Example Prompts:
+2 fingers holding cute mini succulent in a pot, light background, depth of field f2.8, 50mm lens, tilt shift photography
+cute mini Haworthia cymbiformis plant in a pot, light pastel background, depth of field f2.8 3.5, 50mm lens
+cute mini Aloe plant in a pot, white background, depth of field f2.8 3.5, 50mm lens
+cute mini Aloe plant in a pot, white background, depth of field f2.8 3.5, 50mm lens
+cute mini Kalanchoe plant in a pot, pastel background, depth of field f2.8 3.5, 50mm lens
+cute mini African Violet plant in a pot, white background, depth of field f2.8 3.5, 50mm lens
+cute mini Pilea plant in a pot, white background, f2.8 3.5, 50mm lens, tilt shift photography
+cute mini Peperomia Watermelon in a pot, white background, depth of field f2.8 3.5, 50mm lens
+cute mini Lucky Bamboo plant in a pot, white background, depth of field f2.8 3.5, 50mm lens
+ 
+29. POLISHED WOODEN OBJECTS
+Generate beautiful, realistic polished wood sculptures. Change the wood type and see how the texture differs! Example Prompts:
+starwars helmet made of polished walnut burl and blackwood, dynamic contrast, depth mapped
+Buddha made of lacquered polished walnut burl and Mahogany, dynamic contrast, depth mapped
+Warrior Guan Yu made of lacquered polished walnut burl and Mahogany, dynamic contrast, depth mapped
+
+SECTION 7: GRAPHIC DESIGN
+ 
+30. MINIMAL JAPANESE STYLE LOGO
+Minimalist Japanese/Asian style logos that are perfect for any business or brand. Example Prompts: 
+logo of a shark, minimal, style of japanese book cover
+logo of taiwanese brand cup of tea, minimal, style of japanese book cover
+logo of a rooster, minimal, style of japanese illustration
+logo of cup of coffee latte, minimal, style of japanese book cover
+logo of Direwolf, house stark, simple, style of Japanese book cover
+
+31. IMDB MOVIE POSTERS
+Create a movie poster for any movie with this extraordinarily simple prompt. Example Prompts:
+movie poster for the empire strikes back on hoth
+movie poster for fight club
+movie poster for the godfather
+movie poster for batman the dark knight
+movie poster for city of god
+movie poster for interstellar	movie poster for the matrix
+movie poster for forrest gump	movie poster for pulp fiction
+ 
+32. MINIMAL GRAPHIC STORYTELLING POSTERS
+Generate simple and effective graphic design movie posters that tell a bigger story with just a few elements. Example Prompts:
+movie poster for the godfather, by Saul Bass
+movie poster for Gone Girl, by Saul Bass
+movie poster for Apocalypse Now, by Saul Bass
+ 
+33. IOS APP ICONS
+Make simple and effective vector icons for your next iOS app. Example Prompts
+squared with round edges mobile app logo design, flat vector app icon of a cute shiba inu face, minimalistic, white background
+squared with round edges mobile app logo design, flat vector app icon of an open box, minimalistic, white background
+squared with round edges mobile app logo design, flat vector app icon of a rocket, minimalistic, white background
+squared with round edges mobile app logo design, flat vector app icon of a skull, minimalistic, white background
+squared with round edges mobile app logo design, flat vector app icon of a cute onigiri, minimalistic, white background
+ 
+
+34. APP MOCKUPS WITH DEVICE
+Get mockups of any app you can imagine on a phone. Showcase your wildest app design ideas! Example Prompts:
+photography of an iphone [with a modern user interface plant identification app on the screen] inspired by Behance and Figma and dribbble
+photography of an iphone [with a modern user interface plant identification app on the screen] inspired by Behance and Figma and dribbble
+photography of an iphone [with a modern user interface home buying app on the display] inspired by Behance and Figma and dribbble
+photography of an iphone [with a modern user interface plant identification app on the screen] inspired by Behance and Figma and dribbble
+photography of an iphone [with a modern user interface plant identification app on the screen] inspired by Behance and Figma and dribbble
+ 
+35. WEB DESIGN MOCKUPS WITH DEVICE
+Web design mockups inside Macbooks! Example Prompts:
+photo of macbook M1 with [ a modern user interface of plant identification app on the screen] inspired by Behance and Figma and dribbble
+photo of macbook m1 with [modern web user interface of lego website, style of dribbble and Behance and Figma ] on the screen
+photo of macbook m1 with [modern web user interface of nutrition website, style of dribbble and Behance and Figma ] on the screen
+ 
+SECTION 8: FILM
+ 
+36. STUDIO GHIBLI ANIME STILLS
+Generate retro film stills from old Studio Ghibli anime. Example Prompts
+DVD screengrab from studio ghibli movie, beautiful countryside with poppies in the foreground, clouds on blue sky, directed by Hayao Miyazaki, retro anime
+DVD screengrab from studio ghibli movie, the founding fathers signing the declaration of independence, directed by Hayao Miyazaki, retro anime
+DVD screengrab from studio ghibli movie, castle in the sky, aerial shot, flying machines, aesthetic, designed by Hayao Miyazaki, retro anime
+DVD screengrab from studio ghibli movie, star wars imperial star destroyer, directedd by Hayao Miyazaki, retro anime
+DVD screengrab from studio ghibli movie, stormtroopers marching inside the hangar of an imperior star destroyer, directed by Hayao Miyazaki, retro anime
+
+37.STILLS FROM WES ANDERSON FILMS
+Generate film stills with Wes Anderson’s distinct visual style. Example Prompts:
+still from film, Daenerys Targaryen and her dragons, directed by Wes Anderson, quirky costume design
+ still from film, Joffrey Baratheon sitting on the throne, from game of thrones, directed by Wes Anderson, quirky costume design
+still from film, ned stark game of thrones, directed by Wes Anderson, quirky costume design
+
+38. STILLS FROM BLACK AND WHITE FILMS
+Generate stills from old black and white films. Example Prompts:
+still from black and white old movie, film grain, live action pokemon, talking to nurse at pokemon center, directed by Alfred Hitchcock
+still from black and white old movie, film grain, pokemon live action, directed by Alfred Hitchcock
+still from black and white old movie, film grain, pokemon live action, directed by Alfred Hitchcock
+ 
+39. STILLS FROM CLAYMATION FILMS BY TIM BURTON
+Generate stop-motion claymation film stills with Tim Burton’s distinct visual style. Example Prompts:
+DVD screengrab from stop motion movie, claymation, Professor Snape teaching class, directed by Tim Burton
+DVD screengrab from stop motion movie, claymation, hogwarts castle, directed by Tim Burton
+DVD screengrab from stop motion movie, claymation, harry potter and ron weasley, directed by Tim Burton
+
+SECTION 9: FASHION
+ 
+40. VINTAGE FASHION COVER SHOOTS
+VOGUE-style fashion photoshoots that evoke a bygone era. Example Prompts
+model is dressed in vintage clothing and accessories, with a backdrop that evokes a bygone era, fashion shoot, style of vogue
+model is dressed in vintage clothing and accessories, with a backdrop that evokes a bygone era, fashion shoot, style of vogue
+model is dressed in vintage clothing and accessories, with a backdrop that evokes a bygone era, fashion shoot, style of vogue
+ 
+41. FUTURISTIC SNEAKER CONCEPTS
+Design futuristic sneaker concepts inspired by any theme or idea. Example Prompts:
+futuristic yeezy foam runner, inspired by dark souls
+futuristic sneaker inspired by egyptian mythology, by nike
+futuristic sneaker inspired by greek mythology, by nike
+futuristic footwear, inspired by military special forces, by Nike
+futuristic footwear, inspired by Starcraft, by Nike
+ 
+42.FASHION MOODBOARDS
+Start new fashion concepts with moodboards that draw on a wide variety of influences. Example Prompts:
+fashion moodboard for bohemian fashion line, in the style of hip hop
+fashion moodboard for techwear by nike, inspired by arctic
+fashion moodboard for techwear by nike, inspired by athletic clothing
+fashion moodboard for earth tone clothes inspired by the outdoors and hiking
+fashion moodboard for earth tone clothes inspired by the outdoors and hiking
+
+SECTION 10: CONCEPT ART
+
+43. CHARACTER CONCEPT SHEET
+Versatile pixel art prompts for delicious pixel backgrounds. Try switching between: 8 bit pixel art / 16 bit pixel art / 32 bit pixel art. This really does makes a difference on the fidelity of the final image! Example Prompts:
+
+Female wearing cybernetic exoskeleton character design, concept design sheet, white background, style of yoji shinkawa
+space mercenary character design, concept design sheet, white background, style of yoji shinkawa
+male wearing cybernetic exoskeleton character design, concept design sheet, white background, style of craig mullins
+james bond, character design, concept design sheet, white background, style of Yoji Shinkawa
+special ops with cyborg arm character design, concept design sheet, white background, style of yoji shinkawa
+flaming skull and suit character design, concept design sheet, white background
+robot character design, concept design sheet, white background
+
+44. CHARACTER CONCEPT CLOSE-UP
+Create a close-up concept sheet for both original and existing characters. Example Prompts:
+mecha pilot female, short hair, close up character design, multiple concept designs, concept design sheet, white background, style of Yoji Shinkawa
+lion head man character design, concept design sheet, white background, style of yoji shinkawa
+dwarven warlord, close up character design, multiple concept designs, concept design sheet, white background, style of Yoshitaka Amano
+female military officer, close up character design, multiple concept designs, concept design sheet, white background, style of Hideo Kojima
+wizened old female fortuneteller, head, close up character design, multiple concept designs, concept design sheet, white background, style of Yoshitaka Amano
+robot butler, head, close up character design, multiple concept designs, concept design sheet, white background, style of Yoji Shinkawa
+white hair female close up character design, multiple concept designs, concept design sheet, white background, style of Yoshitaka Amano
+
+SECTION 11: TRADITIONAL GAMES
+ 
+45. WARHAMMER STYLE TABLETOP MINIATURES
+Bring your toy ideas to life with this stunning prompt that creates product photos of Warhammer style miniatures. Example Prompts:
+epic miniature of Holy Paladin knight, hand painted, toy, white background, studio lighting, product photography
+warhammer miniature of Lich King, hand painted, plastic, detailed, white background, studio lighting, product photography
+warhammer miniature made of Orc, white background, studio lighting, 35 mm lens
+warhammer miniature of weary Battle cyborg, hand painted, plastic, detailed, white background, studio lighting, product photography
+warhammer miniature of Dark Magician, hand painted, plastic, detailed, white background, studio lighting, product photography
+warhammer figurine of space marine with sword, hand painted, plastic, detailed, white background, studio lighting, product photography
+warhammer miniature of a row of ancient chinese knights, hand painted, plastic, detailed, white background, studio lighting, product photography
+warhammer figurine of zerg hydralisk, hand painted plastic, detailed, white background, studio lighting, product photography
+warhammer miniature of a Steakpunk flying ship, hand painted, plastic, detailed, white background, studio lighting, product photography
+
+46. ART DECO TAROT CARDS
+Design a deck of tarot cards with the art deco style of none other than Alphonse Mucha. Example Prompts
+tarot card illustration, the knight of cups, style of Alphonse Mucha
+tarot card illustration, the lovers, style of Alphonse Mucha
+tarot card illustration, the hermit, style of Alphonse Mucha
+
+SECTION 12: 3D
+
+47.CLEAN ISOMETRIC ART
+Generate clean and stylish isometric images for any theme or concept. Example Prompts:
+Isometric clean image of an old Japanese ryokan with a small open air hot spring
+Isometric clean pixel art image cutaway of inside of japanese bath house
+Isometric clean pixel art image of outside of shrine
+Isometric clean pixel art image cutaway of inside of cable car
+Isometric clean pixel art image of outside of cute design studio
+Isometric clean pixel art image of outside of old apartment building
+Isometric clean pixel art image of a old Japanese gate
+ 
+48. ISOMETRIC CUTAWAY
+Generate isometric cutaways of any object you can imagine. You might be surprised at what’s inside! Example Prompts:
+Isometric clean pixel art image cutaway of inside of a Pineapple
+Isometric clean pixel art image cutaway of inside of Planet earth
+Isometric clean pixel art image cutaway of inside of mecha cockpit
+Isometric clean pixel art image cutaway of inside of melon
+Isometric clean pixel art image cutaway of inside of tree fort
+Isometric clean pixel art image cutaway of inside of a dragon slayer guild fused with a mechanical dragon
+Isometric clean pixel art image cutaway of inside of fox
+
+49. FUTURISTIC VEHICLE CONCEPTS
+Futuristic vehicles inspired by anything. Example Prompts:
+futuristic motorcycle concept inspired by Egyptian mythology
+futuristic motorcycle concept inspired by arctic snowmobile.png
+futuristic motorcycle concept inspired by Akira motorcycle
+
+50. CUTE MATTE CLAY EMOJIS
+Generate cute matte clay isometric emojis of any subject. Example Prompts:
+Tiny cute isometric vespa emoji, soft lighting, soft pastel colors, 3d icon clay render, blender 3d, pastel background
+Tiny cute isometric outside of office emoji, soft lighting, soft pastel colors, 3d icon clay render, blender 3d, pastel background, physically based rendering
+Tiny cute isometric little dog emoji, soft lighting, soft colors, matte clay, blender 3d, pastel background
+Tiny cute isometric cabbage emoji, soft lighting, soft colors, matte clay, blender 3d, pastel background
+Tiny cute isometric cruise ship emoji, soft lighting, soft pastel colors, 3d icon clay render, blender 3d, pastel background, physically based rendering
+ 
+51. SUPER CUTE ANIMALS WEARING KNIT WOOL HATS
+Cute winter animals wearing cozy knit caps, perfect for various design collateral for the holiday season. Example Prompts:
+snowing winter, super cute baby pixar style white fairy bunny, shiny snow-white fluffy, big bright eyes, wearing a woolly cyan hat, delicate and fine, high detailed, bright color, natural light, simple background, octane render, ultra wide angle, 8K
+snowing winter, super cute baby pixar style white fairy bear, shiny snow-white fluffy, big bright eyes, wearing a woolly cyan hat, delicate and fine, high detailed, bright color, natural light, simple background, octane render, ultra wide angle, 8K
+snowing winter, super cute baby pixar style white fairy wolf, shiny snow-white fluffy, big bright eyes, wearing a woolly cyan hat, delicate and fine, high detailed, bright color, natural light, simple background, octane render, ultra wide angle, 8K
+
+Artworks by Style:
+A style of an artwork refers to its distinctive visual elements, techniques and methods. It usually corresponds with an art movement or a school (group) that its author is associated with.
+Example Styles:
+Ancient Egyptian Art: Early Dynastic, Old Kingdom, Middle Kingdom, New Kingdom, Amarna, 3rd Intermediate Period, Late Period, Ptolemaic, 2nd Intermediate Period
+Ancient Greek Art: Archaic, Classical, Hellenistic, Geometric
+Western Medieval Art: Early Christian, Early Byzantine (c. 330–750), Middle Byzantine (c. 850–1204), Mozarabic, Komnenian style (1081-1185), Latin Empire of Constantinople (1204-1261), Late Byzantine/Palaeologan Renaissance (c. 1261–1453), Byzantine, Macedonian Renaissance (867–1056), Romanesque, Mosan art, Gothic, International Gothic, Viking art, Medieval Art, Crusader workshop, Moscow school of icon painting, Cretan school of icon painting, Macedonian school of icon painting, Coptic art, Novgorod school of icon painting, Kyiv school of icon painting, Vladimir school of icon painting, Galicia-Volyn school, Pskov school of icon painting, Yaroslavl school of icon painting, Vologda school of icon painting, Chernihiv school of icon painting
+Western Renaissance Art: Proto Renaissance, Early Renaissance, High Renaissance, Mannerism (Late Renaissance), Northern Renaissance, Renaissance
+Western Post Renaissance Art: Baroque, Tenebrism, Rococo, Classicism, Neoclassicism, Academicism, Romanticism, Orientalism, Costumbrismo, Biedermeier, Neo-Rococo, Luminism, Realism, Stroganov school of icon painting
+Modern Art: American Realism, Naturalism, Naïve Art (Primitivism), Social Realism, Automatic Painting, Action painting, Surrealism, Post-Impressionism, Symbolism, Metaphysical art, Tonalism, Impressionism, Magic Realism, Fantastic Realism, Pointillism, Divisionism, Abstract Art, Neo-baroque, Japonism, Purism, Verism, Art Deco, Precisionism, Cloisonnism, Regionalism, Socialist Realism, Synthetism, Intimism, New Medievialism, Fauvism, Muralism, Art Nouveau (Modern), Cartographic Art, Existential Art, Pictorialism, Expressionism, Lettrism, Kitsch, Mechanistic Cubism, Miserablism, Neo-Romanticism, Abstract Expressionism, Cubism, Analytical Cubism, Color Field Painting, Hard Edge Painting, Synthetic Cubism, Lyrical Abstraction, Orphism, Indian Space painting, Tubism, Cubo-Expressionism, Figurative Expressionism, Art Informel, Futurism, Cubo-Futurism, Tachisme, Neo-Concretism, Rayonism, Synchromism, Performance Art, Dada, Transautomatism, Suprematism, Sots Art, Neo-Byzantine, Post-Painterly Abstraction, Constructivism, Severe Style, Feminist Art, Spectralism, Fiber art, Modernismo, Mail Art, Neo-Suprematism, Analytical Realism, Outsider art, Art Brut, Neoplasticism, Concretism, Neo-Expressionism, Neo-Dada, Perceptism, Neo-Figurative Art, New Realism, Kinetic Art, Spatialism, Op Art, Pop Art, Nouveau Réalisme, Neo-Impressionism, Modernism
+Contemporary Art: Conceptual Art, Minimalism, Post-Minimalism, Light and Space, Environmental (Land) Art, Junk Art, Cyber Art, Photorealism, Hyper-Realism, Poster Art Realism, Contemporary Realism, P&D (Pattern and Decoration), Transavantgarde, Confessional Art, New European Painting, Neo-Pop Art, Neo-Geo, Maximalism, Neo-Orthodoxism, Graffiti Art, Street art, Lowbrow Art, Stuckism, New Casualism, Art Singulier, Superflat, Excessivism, Digital Art, Hyper-Mannerism (Anachronism), Neo-Minimalism, Fantasy Art, Sky Art, Contemporary, Site-specific art, New media art, Classical Realism, Postcolonial art, Queer art
+Chinese Art: Gongbi, Ink and wash painting
+Korean Art: Joseon Dynasty
+Japanese Art: Shin-hanga, Sōsaku hanga, Sumi-e (Suiboku-ga), Ukiyo-e, Yamato-e, Kanō school style, Nanga (Bunjinga), Nihonga, Zen, Ero guro
+Islamic Art: Abbasid Period, Ilkhanid, Nas-Taliq, Timurid Period, Mughal, Ottoman Period, Safavid Period
+Native Art: Native Art, Yoruba, Folk art
+Pre-Columbian Art: Post-classic (c.900-1580)
+Dictionaries with no category: New Ink Painting, Documentary photography, Street Photography
+
+Artworks by Genres:
+A genre system divides artworks according to depicted themes and objects. A classical hierarchy of genres was developed in European culture by the 17th century. It ranked genres in high – history painting and portrait, - and low – genre painting, landscape and still life. This hierarchy was based on the notion of man as the measure of all things. Landscape and still life were the lowest because they did not involve human subject matter. History was highest because it dealt with the noblest events of humanity. Genre system is not so much relevant for a contemporary art; there are just two genre definitions that are usually applied to it: abstract or figurative.
+Example Genres:
+abstract, advertisement, allegorical painting, animal painting, animation, architecture, artist's book, augmented reality, battle painting, bijinga, bird-and-flower painting, calligraphy, capriccio, caricature, cityscape, cloudscape, design, digital, figurative, flower painting, furniture, genre painting, graffiti, history painting, icon, illustration, installation, interior, jewelry, landscape, literary painting, manga, marina, miniature, mobile, mosaic, mural, mythological painting, nude painting (nu), object, ornament, panorama, pastorale, performance, photo, pin-up, portrait, poster, quadratura, religious painting, sculpture, self-portrait, shan shui, sketch and study, stabile, still life, symbolic painting, tapestry, tessellation, trompe-l'œil, tronie, urushi-e, utensil, vanitas, veduta, video, wildlife painting, yakusha-e
+
+Artworks by Media:
+Art media refer to materials the artwork is made from, and to techniques used by the artist to create that artwork. Many modern works are made from a variety of materials by diverse techniques, and the term mixed media has had to be coined to take account of this.
+Example Media: acrylic, albumen silver, aluminium, appropriation, aquatint, assemblage, augmented reality, basalt, bas-relief, binder, blockchain, board, brass, bronze, brush, burlap, cable, cameo, canvas, carbon fiber, card, cardboard, casein, cement, ceramics, chalk, charcoal, chisel, clay, cliché-verre, cloth, coal, collage, collotype, color varnish, colored markers, colored pencils, concrete, copper, cotton, crayon, digital, drawing, drypoint, dust, elephant dung, embroidery, emulsion, enamel, encaustic, engraving, etching, fabric, fabric straps, fat, feather, felt, felt-tip pen, fiberboard, fiberglass, flashlight, fluorescent paint, fresco, frottage, gelatin silver print, gesso, gilt, glass, glitter, gloss, gold, gold leaf, gouache, graffiti, granite, graphite, graphite pencil, grattage, greenstone, grisaille, gum arabic, hematite, hemp, hologram, horns, indian ink, ink, intaglio, iron, iron plate, ivory, japanese paper, jute, lacquer, laid paper, latex, lavis, leadpoint, leather, lemon, light box, light bulb, limestone, linen, linocut, linocut b&w, linocut color, linoleum, lithography, magna, magnets, mahogany panel, majolica, map pins, marble, masking tape, masonite, metal, metalpoint, mezzotint, mixed media, mixed technique, mosaic, mosaïque, mural, music, music paper, nails, oak, objet trouve, obsidian, oil, oilcloth, onyx, paint, painted metal, panel, paper, papier-pelle, papyrus, parchment, pastel, pebbles, pen, pencil, pergament, photogram, photographic paper, photography, photogravure, photomontage, photomosaic, piano, pigment, plaster, plastic, plates, plexiglas, plug socket, plywood, polyester, polymer, polymer paint, polystyrene, poplar, porcelain, postcard, print, printed brochure, pyroxylin, ready-made, recorder with cassette, resin, rubber, sand, sandstone, sanguine, satin, scrapings, screenprint, sepia, shell, silk, silkscreen, silver, silverpoint, sound, sponge, spray paint, stained glass, steel, stencil, stone, string, stucco, stump, tapestry, tar, tempera, terracotta, textile, tin, travertine, turquoise, tusche, twine, varnish, vellum, video, vinyl, vitrage, wall, wallpaper, wash, watercolor, wax, wax pastel, white, whitewash, wine, wire, wood, wood engraving, woodblock print, woodcut, wooden chair, wooden sled, wool, zinc
+
+
+
+
